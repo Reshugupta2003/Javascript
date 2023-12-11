@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loops</title>
+</head>
+
+<body>
+    <h1>This program of about loops.</h1>
+    <script>
+       // For loop
+            sum =0;
+            let a = prompt("Enter the value of n");
+            a = Number.parseInt(a);
+
+            for (let i = 0; i <= a; i++) {
+           sum = sum +i;
+
+            }
+            console.log("The sum of the "+a+" natural number: "+sum);
+
+     //   For - in loop
+
+        let obj = {
+            "Reshu": 92,
+            "Nitya": 90,
+            "Dhruv": 94
+        }
+        for (let a in obj) {
+            console.log(a + " "+ obj[a])
+        }
+
+        //For - of
+
+        for (let a of "Ramakant") {
+            console.log(a)
+        }
+
+    </script>
+</body>
+
+</html>

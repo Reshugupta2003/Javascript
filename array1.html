@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h2>Array toturial</h2>
+    <script>
+        let marks = [76, 95, false, "Not present"];
+        console.log(marks);
+        console.log(marks[2]);
+        console.log(marks.pop());
+        console.log(marks.length);
+        console.log(marks.toString());
+        console.log(marks.join("-"));
+        marks.push(23);
+        console.log(marks.shift());
+        marks.unshift(12);
+        console.log(marks);
+        delete marks[1];
+        console.log(marks);
+        let a = ["Reshu", "Chirag ", "Nakul", "Amit", 45, 8, undefined, false, null];
+        console.log(marks.concat(a));
+        console.log(a.sort());
+
+        let compare  = (a,b) =>{
+            return b - a;
+        }
+        let data = [45, 95, 12, 8, 15, 55, 78];
+        data.sort(compare);
+        console.log(data);
+
+    </script>
+</body>
+</html>
