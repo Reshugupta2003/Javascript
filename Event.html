@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listen</title>
+</head>
+<body>
+    <div>
+        <button id="btn" onclick="this.innerHTML =Date()">CLick me</button>
+    </div>
+    <script>
+        let b = prompt("Enter number 2 to remove Hello World 2 ?")
+      
+        let a=  btn.addEventListener('click',function (e) {
+            alert("Hello World!");
+        })
+        btn.addEventListener('click', function(e) {
+            alert("Hello world 2!")
+        })
+       
+        if(b=="2"){
+            btn.removeEventListener('click', a);
+        } 
+       
+    </script>
+</body>
+</html>
