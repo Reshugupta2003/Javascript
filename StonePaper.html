@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Seaser</title>
+</head>
+<body>  
+    <h1>Game is starting Choose your number</h1>
+    <h2> 1 = Stone</h2>
+    <h2> 2 = Paper</h2>
+    <h2> 3 = Seaser</h2>
+    <Script>
+      
+      var x=0;
+      var t =0;
+      var c =0;
+      while (x<3) {    
+        var randomInteger = Math.floor(Math.random() *3.33);
+        console.log(randomInteger);
+        var UserNum = prompt("Enter Your Number");
+      UserNum = Number.parseInt(UserNum);     
+      if (randomInteger == UserNum) {
+        alert("Match is Draw , TRY Again");
+        
+      }
+      else if(randomInteger == 1){
+           if (UserNum == 2) {
+            alert("You won the watch");
+            t++;
+           } else {
+            alert("You did not win");
+            c++;
+           }
+           x++;
+      } 
+      else if(randomInteger== 2){
+           if (UserNum == 1) {
+            alert("You did not win");
+            c++;
+           } else {
+            alert("You won the watch");
+            t++;
+           }
+           x++;
+      }
+      else if(randomInteger ==3) {
+        if (UserNum == 1) {
+            alert("You won the watch");
+            t++;
+        } else {
+            alert("You did not win");
+            c++;
+        }
+        x++;
+    }
+        else{
+            alert("You are deserve next chance");
+            
+        }
+    }
+    if (t>c) {
+        alert("Finally, You Wonnn!")
+    } else {
+        alert("Sorry! You are not win")
+    }
+    </Script>
+</body>
+</html>

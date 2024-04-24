@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guesser game</title>
+</head>
+
+<body>
+  <h1>  <center> Guesser Game finished! </center></h1>
+  <script>
+    const min = 1;
+    const max = 100;
+    var randomInteger = Math.floor(Math.random() * (max - min + 1)) + min;
+    
+    var count = 0;
+
+    do {
+      var UserNum = prompt("Enter Your Number");
+      UserNum = Number.parseInt(UserNum);
+      var score = 100 - count;
+      if (UserNum == randomInteger) {
+
+        console.log("Your score is " + score);
+      }
+      else if(UserNum < randomInteger)
+      {
+        console.log("Your number is lesser than Guess Number")
+        count++;
+        console.log(" Please try Again");
+      }
+      else if(UserNum > randomInteger){
+        console.log("Your number is greater than Guess Number")
+        count++;
+        console.log(" Please try Again");
+      }
+
+      else if ( UserNum<0 && UserNum>100)
+      {
+         console.log("Please enter the digit from 0 to 100")
+      }
+
+    } while (UserNum !== randomInteger || UserNum == 1000);
+
+  </script>
+</body>
+
+</html>

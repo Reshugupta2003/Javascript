@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Creater</title>
+    <style>
+        html, body {
+  height: 100%;
+  width: 100%;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+  background-color: rgb(255, 170, 95);
+}
+        #joke {
+  width: 80vw;
+  height: 20%;
+  padding: 20px;
+  margin: 55px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding-top: 3%;
+  font-size: 230%;
+}
+  h1{
+    background-color: black;
+    color: white;
+    
+  }
+  button{
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+  }
+  button:active{
+    padding: 12px;
+    color: rgb(49, 255, 22);
+  }
+    </style>
+</head>
+<body>
+    <h1> Jokky Jokes</h1>
+    <div id="joke"> Hy i am herre </div>
+    <button id="Click"> Generate </button>
+
+    <script>
+       let My_joke = [
+        {
+          "category": "Misc",
+          "type": "single",
+          "joke": "Relationship Status: just tried to reach for my dog's paw and he pulled it away so I pretended I was reaching for the remote.",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "racist": false,
+            "sexist": false,
+            "political": false,
+            "explicit": false
+          },
+          "id": 195,
+          "safe": true,
+          "lang": "en"
+        },
+        {
+          "category": "Misc",
+          "type": "twopart",
+          "joke": "Arguing with a woman is like reading a software's license agreement.",
+          "delivery": "In the end you ignore everything and click \"I agree\".",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "political": false,
+            "racist": false,
+            "sexist": true,
+            "explicit": false
+          },
+          "id": 71,
+          "safe": false,
+          "lang": "en"
+        },
+        {
+          "category": "Misc",
+          "type": "twopart",
+          "joke": "I told my wife to shave her pussy.",
+          "delivery": "I woke up bald.",
+          "flags": {
+            "nsfw": true,
+            "religious": false,
+            "political": false,
+            "racist": false,
+            "sexist": false,
+            "explicit": true
+          },
+          "id": 187,
+          "safe": false,
+          "lang": "en"
+        },
+        {
+          "category": "Dark",
+          "type": "twopart",
+          "joke": "White people don't shoot each other in the streets as black people do.",
+          "delivery": "They do it in schools because they have class.",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "political": false,
+            "racist": true,
+            "sexist": false,
+            "explicit": true
+          },
+          "id": 116,
+          "safe": false,
+          "lang": "en"
+        },
+        {
+          "category": "Programming",
+          "type": "single",
+          "joke": "UDP is better in the COVID era since it avoids unnecessary handshakes.",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "political": false,
+            "racist": false,
+            "sexist": false,
+            "explicit": false
+          },
+          "id": 259,
+          "safe": true,
+          "lang": "en"
+        },
+        {
+          "category": "Programming",
+          "type": "twopart",
+          "joke": "What's the object-oriented way to become wealthy?",
+          "delivery": "Inheritance.",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "political": false,
+            "racist": false,
+            "sexist": false,
+            "explicit": false
+          },
+          "id": 46,
+          "safe": true,
+          "lang": "en"
+        },
+        {
+          "category": "Misc",
+          "type": "twopart",
+          "joke": "What's the difference between England and a tea bag?",
+          "delivery": "The tea bag stays in the cup longer.",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "political": false,
+            "racist": false,
+            "sexist": false,
+            "explicit": false
+          },
+          "safe": true,
+          "id": 308,
+          "lang": "en"
+        },
+        {
+          "category": "Pun",
+          "type": "single",
+          "joke": "How do you make holy water? You boil the hell out of it.",
+          "flags": {
+            "nsfw": false,
+            "religious": true,
+            "political": false,
+            "racist": false,
+            "sexist": false,
+            "explicit": false
+          },
+          "id": 202,
+          "safe": false,
+          "lang": "en"
+        },
+        {
+          "category": "Misc",
+          "type": "twopart",
+          "joke": "This morning I accidentally made my coffee with Red Bull instead of water.",
+          "delivery": "I was already on the highway when I noticed I forgot my car at home.",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "political": false,
+            "racist": false,
+            "sexist": false,
+            "explicit": false
+          },
+          "id": 146,
+          "safe": true,
+          "lang": "en"
+        },
+        {
+          "category": "Dark",
+          "type": "twopart",
+          "joke": "What did the boy with no arms get for Christmas?",
+          "delivery": "I don't know, he hasn't opened it yet.",
+          "flags": {
+            "nsfw": false,
+            "religious": false,
+            "political": false,
+            "racist": false,
+            "sexist": false,
+            "explicit": false
+          },
+          "id": 144,
+          "safe": false,
+          "lang": "en"
+        }
+      
+      ]
+      let index = Math.floor(Math.random() * (My_joke.length - 1));
+      console.log(index);
+      console.log(My_joke.length)
+      joke.innerHTML = My_joke[index].joke;
+      
+      let a = Click.addEventListener('click', function (e) {
+        let index = Math.floor(Math.random() * (My_joke.length - 1));
+      console.log(index);
+      console.log(My_joke.length)
+      joke.innerHTML = My_joke[index].joke;
+      })
+     
+      
+    </script>
+</body>
+</html>
