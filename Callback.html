@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <h1>This is Callback function</h1>
+    <script>
+        function loadScript(src, Callback){
+            var script = document.createElement("script");
+            script.src = src;
+            script.onload = function() {
+                console.log("Loaded Script with SRC: "+ src);
+                Callback(null);
+            }
+            script.onerror = function() {
+                console.log("Error loading src "+ src);
+                Callback(new Error("Src got some error"));
+            }
+            document.body.appendChild(script);
+        }
+        function hello(error) {
+            if(error) {
+                console.log(error);
+                return;
+            }
+            alert("Hello");
+        }
+       
+        loadScript("https://cdn.jsdelivr.net/np/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", function GoodMorning(error) {
+
+                if (error) {
+                    console.log(error);
+                    sendEmergencyMessageToCeo();
+                    return
+                }
+                loadScript("https://cdn.jsdelivr.net/np/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", function GoodMorning(error) {
+
+                    if (error) {
+                        console.log(error);
+                        sendEmergencyMessageToCeo();
+                        return
+                    }
+                    loadScript("https://cdn.jsdelivr.net/np/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", function GoodMorning(error) {
+
+                        if (error) {
+                            console.log(error);
+                            sendEmergencyMessageToCeo();
+                            return
+                        }
+                        loadScript("https://cdn.jsdelivr.net/np/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", function GoodMorning(error) {
+
+                        });
+                    });
+                });
+            });
+    </script>
+</body>
+</html>
