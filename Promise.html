@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello World</p>
+    <Script>
+        let promise = new Promise(function (resolve, reject) {
+            console.log("Hello");
+            resolve(56);
+        })
+        setTimeout(function()
+        {
+            console.log("Hello , wait 2 Second");    
+        }, 2000);
+        console.log(promise);
+
+        promise.then((res) => {
+            console.log("promise fullfilled", res);
+        })
+        promise.catch((err) => {
+            console.log('reject', err);
+        })
+    </Script>
+</body>
+</html>
