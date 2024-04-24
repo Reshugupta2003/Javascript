@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: rgb(255, 36, 21);
+        }
+        .yellow{
+            background-color: rgb(153, 99, 12);
+            color: azure;
+        }
+        .text-brown{
+            color: rgb(255, 174, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>ClassName and ClassList</h1>
+<div id="First" class="red">
+    <span >Hy, I am good</span>
+</div>
+<script>
+    First.className = "red";
+    let a =  setTimeout(() => {
+        alert("It takes 3sec to show because of settimeout function");
+    }, 5000);
+    let b = prompt("Do you want to use clear timeOut y/n ?");
+    if ("y" == b) {
+        clearTimeout(a);
+    }
+
+     const  sum =(a,b) => {
+        console.log("Function is runnig " + (a + b));
+         
+     }
+     setTimeout(sum,3000,6,8);
+     setInterval(() => {
+        alert("Set Time Interval");
+     }, 10000);
+</script>
+</body>
+</html>

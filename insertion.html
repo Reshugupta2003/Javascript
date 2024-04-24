@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Method</title>
+</head>
+<body>
+    outer text from first container in starting
+    <div class="first"> I am first container</div>
+    <div>hy</div>
+    outer text from first container in ending
+    <p id="para">I am paragraph</p>
+    <script>
+        let a = document.getElementsByTagName('div')[0]
+        let b = document.createElement('div');
+        //  a.prepend('b')
+        // a.replaceWith("REplace");
+        a.append('b')
+      console.log( a.getAttribute("class")); 
+
+    //   let para = document.getElementById('para');
+      para.insertAdjacentHTML('beforeend','<div class="test"> beforeend</div>');
+      para.insertAdjacentHTML('beforebegin','<div class="test"> beforebegin</div>');
+      para.insertAdjacentHTML('afterend','<div class="test"> afterend</div>');
+      para.insertAdjacentHTML('afterbegin','<div class="test"> afterbegin</div>');
+    </script>
+</body>
+</html>
