@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script>
+    class RailwayForm{
+
+      submit(){
+        alert(this.name + " : Your form is submitted for train number : " + this.trainno);
+      }
+      cancel(){
+      alert(`${this.name} : Your form is cancelled for train number : ${this.trainno}`);
+      }
+      fill(givenname, trainno){
+        this.name = givenname;
+        this.trainno = trainno;
+      }
+    }
+
+    // Create a form for Reshu
+     let Reshu = new RailwayForm();
+    Reshu.fill("Reshu", "12345")
+    Reshu.submit()
+    Reshu.cancel();
+  </script>
+</body>
+
+</html>
