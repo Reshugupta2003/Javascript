@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script >
+    let arr = [6, 3, 9, 17, 2, 5, 11];
+    // Write your code here
+    [a, b, c] = arr;
+    console.log(`${a},  ${b},  ${c}`);
+    [arr, , , ...rest] = arr;
+    console.log(a + " "+ rest);
+
+    //Spread syntax
+    let arr1 = [4, 7, 19];
+    let obj = { ...arr1};
+    console.log(obj);
+
+    let obj2 = {
+      name: "John",
+      age: 21,
+      company: "Haxt"
+    }
+    console.log({...obj2, name: "Reshu",age: 22});
+    console.log({name: "Reshu", age: 23, ...obj2});
+
+  </script>
+</body>
+
+</html>
