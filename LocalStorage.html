@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script>
+    let key = prompt("Enter the key");
+    let value = prompt("Enter the value");
+
+    localStorage.setItem(key, value);
+
+    console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
+
+    window.onstorage = (e) =>{
+      alert("Changed");
+      console.log(e);
+    }
+  </script>
+</body>
+
+</html>
